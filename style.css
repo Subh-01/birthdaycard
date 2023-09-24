@@ -4,8 +4,20 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
   }
+
+  html{
+    height: -webkit-fill-available;
+    max-width: fit-content;
+  }
   body {
   background-color: #6870df;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
         /* Set the background image */
         background-image: url('bgrd.jpg');
         background-size: cover;
@@ -13,19 +25,31 @@
         background-attachment: fixed;
         margin: 0; /* Remove default body margin */
         font-family: 'Poppins', sans-serif;
-
+        height: -webkit-fill-available;
+        max-width: fit-content;
   }
+
+  .container {
+    position: relative; /* Add this to make it a positioning context */
+    width: 100vw; /* Adjust the width of the container as needed */
+    height: 100vh; /* Adjust the height of the container as needed */
+    height:-webkit-fill-available;
+}
+
   .card {
     width: 640px;
     height: 400px;
     position: absolute;
-    margin: auto;
+    bottom: 0; /* Position the card at the bottom of the container */
+    top: 0;
     left: 0;
-    right: 1;
-    top: 7;
-    bottom: 0;
-    -webkit-perspective: 1200px;
-    perspective: 1200px;
+    right: 1; 
+    top: 70%; /* Adjust as needed to center vertically */
+    left: 50%; /* Adjust as needed to center horizontally */
+    transform: translate(-50%, -50%);
+    margin: auto;
+    -webkit-perspective: 1000px;
+    perspective: 12 00px;
     transition: 1s;
   }
   .card:hover {
